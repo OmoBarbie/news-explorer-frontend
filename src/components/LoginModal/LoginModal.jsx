@@ -1,4 +1,4 @@
-import ModalWithForm from "../ModalWithForm/ModalWithForm";
+import LoginModal from "../LoginModal";
 
 function LoginModal({ isOpen, onClose }) {
   return (
