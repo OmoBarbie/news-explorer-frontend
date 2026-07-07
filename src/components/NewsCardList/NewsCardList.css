@@ -1,0 +1,25 @@
+.card__container {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  width: 400px;
+}
+
+.cards__container {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  gap: 16px;
+  margin-bottom: 64px;
+}
+
+.show-more {
+  background-color: #e8e8e8;
+  border-radius: 80px;
+  width: 288px;
+  height: 64px;
+  opacity: 1;
+  font-family: "Roboto";
+  font-color: #1a1b22;
+  font-size: 18px;
+}

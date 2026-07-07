@@ -1,11 +1,18 @@
 import Header from "../Header/Header";
 import About from "../About/About";
 import Footer from "../Footer/Footer";
+import NewsCardList from "../NewsCardList/NewsCardList";
+import "./Main.css";
 
 const Main = ({ handleLoginClick, isLoggedIn, onSignOut }) => {
   return (
     <>
       <Header></Header>
+      <section className="main">
+        <div className="main__list">
+          <NewsCardList />
+        </div>
+      </section>
       <About></About>
       <Footer></Footer>
       <main className="main">

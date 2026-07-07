@@ -1,0 +1,47 @@
+.card__item {
+  height: 576px;
+  width: 400px;
+  border-radius: 16px;
+  overflow: hidden;
+  color: #b6bcbf;
+  background-color: #ffffff;
+}
+
+.card__image {
+  height: 272px;
+  width: 400px;
+}
+
+.card__description {
+  color: #1a1b22;
+  margin: 0;
+}
+
+.card__title {
+  font-family:
+    "Roboto Slab",
+    sans serif;
+  font-weight: 400;
+  font-size: 26px;
+  color: #1a1b22;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card__source {
+  color: #b6bcbf;
+}
+
+.card__list-title {
+  font-family:
+    "Roboto Slab",
+    sans serif;
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.card__details {
+  margin-left: 24px;
+  margin-right: 24px;
+}
