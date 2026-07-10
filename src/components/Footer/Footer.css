@@ -15,6 +15,38 @@
   margin-right: 106px;
 }
 
+.footer__link {
+  color: #1a1b22;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.footer__link:hover {
+  color: #1a1b22;
+  cursor: pointer;
+}
+
+.footer__link:active {
+  color: #1a1b22;
+}
+
+.footer__link:visited {
+  color: #1a1b22;
+}
+
 .footer__copyright {
   margin-left: 104px;
+}
+
+.footer__github {
+  background: url("../../images/github.png") center transparent no-repeat;
+  width: 24px;
+  height: 24px;
+}
+
+.footer__linkedin {
+  background: url("../../images/LinkedIn.png") center transparent no-repeat;
+  width: 24px;
+  height: 24px;
 }

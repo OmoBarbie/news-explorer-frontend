@@ -3,11 +3,21 @@ import About from "../About/About";
 import Footer from "../Footer/Footer";
 import NewsCardList from "../NewsCardList/NewsCardList";
 import "./Main.css";
+import ModalWithForm from "../ModalWithForm/ModalWithForm";
+import LoginModal from "../LoginModal/LoginModal";
 
-const Main = ({ handleLoginClick, isLoggedIn, onSignOut }) => {
+const Main = ({
+  handleLoginClick,
+  isLoggedIn,
+  onSignOut,
+  handleCloseModal,
+}) => {
   return (
     <>
-      <Header></Header>
+      <Header
+        handleLoginClick={handleLoginClick}
+        handleCloseModal={handleCloseModal}
+      />
       <section className="main">
         <div className="main__list">
           <NewsCardList />

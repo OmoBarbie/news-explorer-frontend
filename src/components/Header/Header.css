@@ -121,3 +121,15 @@
   right: 0px;
   border: 1px #2f71e5;
 }
+
+.search__button:hover {
+  background-color: #347eff;
+  cursor: pointer;
+  border: none;
+}
+
+.search__button:active {
+  background-color: #2a65cc;
+  cursor: pointer;
+  border: none;
+}

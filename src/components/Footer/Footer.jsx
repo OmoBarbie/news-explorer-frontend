@@ -7,7 +7,7 @@ const Footer = () => {
       <p className="footer__copyright">© 2026 Omotayo Oluwole</p>
       <ul className="footer__links">
         <li>
-          <Link to="/home" className="footer__link">
+          <Link to="/" className="footer__link">
             Home
           </Link>
         </li>
@@ -18,12 +18,12 @@ const Footer = () => {
         </li>
         <li>
           <a href="https://www.github.com" className="footer__link">
-            GitHub
+            <div className="footer__github"></div>
           </a>
         </li>
         <li>
           <a href="https://www.linkedin.com" className="footer__link">
-            LinkedIn
+            <div className="footer__linkedin"></div>
           </a>
         </li>
       </ul>

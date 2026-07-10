@@ -1,11 +1,32 @@
 import "./LoginModal.css";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
-function LoginModal({ isOpen, onClose }) {
+function LoginModal({
+  isOpen,
+  handleCloseModal,
+  handleOpenRegister,
+  title,
+  buttonText,
+  altText,
+}) {
   return (
-    <ModalWithForm isOpen={isOpen} onClose={onClose}>
-      <h2>Sign In</h2>
-      <p>Login form goes here</p>
+    <ModalWithForm
+      isOpen={isOpen}
+      handleCloseModal={handleCloseModal}
+      handleAlternate={handleOpenRegister}
+      title={title}
+      buttonText={buttonText}
+      altText={altText}
+    >
+      <label className="modal__label">
+        Email
+        <input className="modal__input" type="email" placeholder="Email" />
+      </label>
+      <div className="modal__warning">Invalid email address</div>
+      <label className="modal__label">
+        Password
+        <input className="modal__input" type="password" />
+      </label>
     </ModalWithForm>
   );
 }

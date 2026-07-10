@@ -1,0 +1,32 @@
+.modal__label {
+  display: flex;
+  flex-direction: column;
+  color: #2f71e5;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 12px;
+  row-gap: 9px;
+  /* margin-bottom: 31px; */
+}
+
+.modal__input {
+  -webkit-appearance: none;
+  color: #000000;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 14px;
+  opacity: 0.2;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  padding-bottom: 10px;
+}
+
+.modal__warning {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 12px;
+  color: #ff0000;
+  margin-top: 3px;
+  margin-bottom: 13px;
+}

@@ -6,13 +6,16 @@ import SavedNews from "../SavedNews/SavedNews";
 
 import LoginModal from "../LoginModal/LoginModal";
 import RegisterModal from "../RegisterModal/RegisterModal";
+import RegistrationSuccessModal from "../RegistrationSuccessModal/RegistrationSuccessModal";
 
 function App() {
-  const [activeModal, setActiveModal] = useState("");
+  const [activeModal, setActiveModal] = useState(null);
 
   const handleOpenLogin = () => setActiveModal("login");
   const handleOpenRegister = () => setActiveModal("register");
-  const handleCloseModal = () => setActiveModal("");
+  const handleRegistrationSuccess = () =>
+    setActiveModal("registration-success");
+  const handleCloseModal = () => setActiveModal(null);
 
   // ESC key close
   useEffect(() => {
@@ -30,18 +33,52 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Main onLoginClick={handleOpenLogin} />} />
+          <Route
+            path="/"
+            element={
+              <Main
+                handleLoginClick={handleOpenLogin}
+                handleCloseModal={handleCloseModal}
+              />
+            }
+          />
           <Route path="/saved-news" element={<SavedNews />} />
         </Routes>
       </BrowserRouter>
 
       {/* MODALS LIVE HERE */}
-      <LoginModal isOpen={activeModal === "login"} onClose={handleCloseModal} />
-
-      <RegisterModal
-        isOpen={activeModal === "register"}
-        onClose={handleCloseModal}
-      />
+      {activeModal === "login" && (
+        <LoginModal
+          isOpen={true}
+          handleCloseModal={handleCloseModal}
+          handleOpenRegister={handleOpenRegister}
+          title={"Sign in"}
+          buttonText={"Sign in"}
+          altText={"Sign up"}
+        />
+      )}
+      {activeModal === "register" && (
+        <RegisterModal
+          isOpen={true}
+          handleCloseModal={handleCloseModal}
+          handleOpenLogin={handleOpenLogin}
+          handleRegistrationSuccess={handleRegistrationSuccess}
+          title={"Sign up"}
+          buttonText={"Sign up"}
+          altText={"Sign in"}
+        />
+      )}
+      {activeModal === "registration-success" && (
+        <RegistrationSuccessModal
+          isOpen={true}
+          handleCloseModal={handleCloseModal}
+          handleOpenLogin={handleOpenLogin}
+          title={"Registration successfully completed!"}
+          buttonText={"Continue to Login"}
+          altText={"Sign in"}
+          renderSubmit={false}
+        />
+      )}
     </>
   );
 }

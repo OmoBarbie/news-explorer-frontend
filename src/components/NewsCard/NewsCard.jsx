@@ -1,8 +1,8 @@
 import "./NewsCard.css";
 import { mockArticles } from "../../utils/mockdata";
 
-const NewsCard = () => {
-  const article = mockArticles[0];
+const NewsCard = ({ newsArticle }) => {
+  const article = newsArticle;
   return (
     <>
       <div className="card__item">

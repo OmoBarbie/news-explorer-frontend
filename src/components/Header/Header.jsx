@@ -2,7 +2,12 @@ import { Link } from "react-router-dom";
 import "./Header.css";
 // import logoPath from "../../images/logo.svg";
 
-const Header = ({ handleLoginClick, isLoggedIn, onSignOut }) => {
+const Header = ({
+  handleLoginClick,
+  isLoggedIn,
+  onSignOut,
+  handleCloseModal,
+}) => {
   return (
     <header className="header">
       <div className="header__wrapper">

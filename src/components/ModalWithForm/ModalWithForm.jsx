@@ -1,16 +1,50 @@
-// import "./ModalWithForm.css";
+import "./ModalWithForm.css";
 
-// function ModalWithForm({ isOpen, onClose, children }) {
-//   if (!isOpen) return null;
+function ModalWithForm({
+  children,
+  renderSubmit = true,
+  handleCloseModal,
+  handleAlternate,
+  title,
+  buttonText,
+  altText,
+  handleSubmit,
+}) {
+  return (
+    <div className="modal">
+      <div className="modal__content">
+        <button className="modal__close" onClick={handleCloseModal}>
+          &times;
+        </button>
+        <h2 className="modal__title">{title}</h2>
+        <form className="modal__form" onSubmit={handleSubmit}>
+          {children}
 
-//   return (
-//     <div className="modal" onClick={onClose}>
-//       <div className="modal__content" onClick={(e) => e.stopPropagation()}>
-//         <button onClick={onClose}>X</button>
-//         {children}
-//       </div>
-//     </div>
-//   );
-// }
+          {renderSubmit ? (
+            <>
+              <button
+                className="modal__submit modal__submit_active_true"
+                type="submit"
+              >
+                {buttonText}
+              </button>
 
-// export default ModalWithForm;
+              <button className="modal__alternate" onClick={handleAlternate}>
+                or {altText}
+              </button>
+            </>
+          ) : (
+            <button
+              className="modal__alternate modal__alternate_type_success"
+              onClick={handleAlternate}
+            >
+              {altText}
+            </button>
+          )}
+        </form>
+      </div>
+    </div>
+  );
+}
+
+export default ModalWithForm;
