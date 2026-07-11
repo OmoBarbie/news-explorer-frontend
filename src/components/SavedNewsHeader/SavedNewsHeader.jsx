@@ -1,0 +1,77 @@
+import { Link } from "react-router-dom";
+import "./SavedNewsHeader.css";
+// import logoPath from "../../images/logo.svg";
+
+const SavedNewsHeader = ({
+  handleLoginClick,
+  isLoggedIn = true,
+  onSignOut,
+  handleCloseModal,
+}) => {
+  return (
+    <header className="header_location_saved-news">
+      <div className="header__wrapper_location_saved-news">
+        {/* LEFT SIDE */}
+        <Link to="/" className="header__logo-link">
+          <span className="header__title_location_saved-news">
+            NewsExplorer
+          </span>
+        </Link>
+
+        {/* RIGHT SIDE */}
+        <nav className="navigation">
+          <ul className="navigation__list">
+            <li>
+              <Link to="/" className="navigation__link_location_saved-news">
+                Home
+              </Link>
+            </li>
+
+            {isLoggedIn ? (
+              <>
+                <li>
+                  <Link
+                    to="/saved-news_location_saved-news"
+                    className="navigation__link_location_saved-news navigation__link_active_location_saved-news
+                    "
+                  >
+                    Saved Articles
+                  </Link>
+                </li>
+                <li>
+                  <button
+                    onClick={onSignOut}
+                    className="navigation__button_location_saved-news"
+                  >
+                    Sign Out
+                  </button>
+                </li>
+              </>
+            ) : (
+              <li>
+                <button
+                  onClick={handleLoginClick}
+                  className="navigation__button_location_saved-news"
+                >
+                  Sign In
+                </button>
+              </li>
+            )}
+          </ul>
+        </nav>
+      </div>
+      <div className="saved-news__subheader">
+        <h2 className="saved-news__title">Saved Articles</h2>
+        <h3 className="saved-news__subtitle">Manage your saved articles</h3>
+        <p className="saved-news__keywords">
+          {"By keywords: "}
+          <span className="saved-news__keywords_bold">
+            Nature, Yellowstone, and 2 others
+          </span>
+        </p>
+      </div>
+    </header>
+  );
+};
+
+export default SavedNewsHeader;

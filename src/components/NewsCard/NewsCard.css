@@ -5,6 +5,7 @@
   overflow: hidden;
   color: #b6bcbf;
   background-color: #ffffff;
+  position: relative;
 }
 
 .card__image {
@@ -44,4 +45,23 @@
 .card__details {
   margin-left: 24px;
   margin-right: 24px;
+}
+
+.card__bookmark-button {
+  background: url("../../images/lightgraybookmark.png") center #ffffff no-repeat;
+  height: 40px;
+  width: 40px;
+  border-radius: 8px;
+  border: none;
+}
+
+.card__bookmark-button:hover {
+  cursor: pointer;
+  background-image: url("../../images/bookmark-dark.png");
+}
+
+.card__bookmark-container {
+  position: absolute;
+  top: 24px;
+  right: 24px;
 }
