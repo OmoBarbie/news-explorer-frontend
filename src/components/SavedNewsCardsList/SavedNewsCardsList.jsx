@@ -8,7 +8,7 @@ const SavedNewsCardsList = ({}) => {
       <ul className="saved-news__list">
         {mockArticles.map((article) => (
           <li className="saved-news__item" key={article.id}>
-            <NewsCard newsArticle={article} />
+            <NewsCard newsArticle={article} isSaved={true} />
           </li>
         ))}
       </ul>

@@ -19,6 +19,7 @@ const Header = ({
         {/* RIGHT SIDE */}
         <nav className="navigation">
           <ul className="navigation__list">
+            <button className="navigation__menu-button" />
             <li>
               <Link to="/" className="navigation__link navigation__link_active">
                 Home
@@ -52,7 +53,7 @@ const Header = ({
         </nav>
       </div>
       <div className="search">
-        <div className="search__containter">
+        <div className="search__container">
           <h2 className="search__title">What's going on in the world?</h2>
           <p className="search__description">
             Find the latest news on any topic and save them in your personal

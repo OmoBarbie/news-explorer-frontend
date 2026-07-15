@@ -35,7 +35,7 @@
 .navigatiion {
 }
 
-.navigation__list {
+.navigation__list-savednews-header {
   display: flex;
   align-items: center;
   list-style-type: none;

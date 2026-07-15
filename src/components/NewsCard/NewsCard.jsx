@@ -1,8 +1,16 @@
 import "./NewsCard.css";
 import { mockArticles } from "../../utils/mockdata";
+import { useState } from "react";
 
-const NewsCard = ({ newsArticle }) => {
+const NewsCard = ({ newsArticle, isSaved }) => {
   const article = newsArticle;
+  const [isBookmarked, setIsBookmarked] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const toggleBookmark = () => {
+    setIsBookmarked(!isBookmarked);
+  };
+
   return (
     <>
       <div className="card__item">
@@ -18,8 +26,25 @@ const NewsCard = ({ newsArticle }) => {
           <p className="card__source">{article.source.name}</p>
         </div>
         <div className="card__bookmark-container">
-          <button className="card__bookmark-button"></button>
+          {isSaved && (
+            <button
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+              className="card__remove-bookmark-button"
+              onClick={toggleBookmark}
+            ></button>
+          )}
+          {!isSaved && (
+            <button
+              className={`card__bookmark-button ${isBookmarked ? "card__bookmark-button_bookmarked_true" : ""}`}
+              onClick={toggleBookmark}
+            ></button>
+          )}
         </div>
+        {isHovered && (
+          <div className="card__delete-message">Remove from Saved</div>
+        )}
+        <div className="card__keyword">World News</div>
       </div>
     </>
   );

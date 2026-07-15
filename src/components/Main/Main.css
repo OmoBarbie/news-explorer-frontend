@@ -9,3 +9,17 @@
   align-items: center;
   padding-bottom: 80px;
 }
+
+/*tablet view*/
+@@media (max-width: 1024px) {
+ 
+  }
+}
+
+/*mobile view*/
+@media (max-width: 768px) {
+  .main {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

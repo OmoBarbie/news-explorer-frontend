@@ -20,7 +20,7 @@ const SavedNewsHeader = ({
 
         {/* RIGHT SIDE */}
         <nav className="navigation">
-          <ul className="navigation__list">
+          <ul className="navigation__list-savednews-header">
             <li>
               <Link to="/" className="navigation__link_location_saved-news">
                 Home
