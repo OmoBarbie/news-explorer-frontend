@@ -31,3 +31,15 @@
   cursor: pointer;
   background-color: #e8e8e8;
 }
+
+
+/*Mobile view*/
+@media (max-width: 768px) {
+.cards__container {
+  flex-wrap:wrap;
+
+  .show-more {
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+}

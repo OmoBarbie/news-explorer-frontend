@@ -18,8 +18,8 @@ const Header = ({
 
         {/* RIGHT SIDE */}
         <nav className="navigation">
+          <button className="navigation__menu-button" />
           <ul className="navigation__list">
-            <button className="navigation__menu-button" />
             <li>
               <Link to="/" className="navigation__link navigation__link_active">
                 Home

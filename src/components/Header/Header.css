@@ -108,7 +108,8 @@
 }
 
 .search__input::placeholder {
-  color: #1a1b22;
+  color: #b6bcbf;
+
   font-size: 16px;
   font-weight: 400px;
 }
@@ -141,6 +142,7 @@
   background-image: url("../../images/hamburgermenuicon.svg");
   background-color: transparent;
   background-repeat: no-repeat;
+  display: none;
 }
 
 /*tablet view*/
@@ -195,12 +197,44 @@
 
 /*mobile view*/
 @media (max-width: 768px) {
+  .header {
+    padding: 16px;
+  }
+
   .header__wrapper {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 16px;
   }
 
   .navigation__list {
     display: none;
+  }
+
+  .navigation__menu-button {
+    display: block;
+    background-position: center;
+    height: 24px;
+    width: 24px;
+  }
+
+  .search__title {
+    margin-top: 30px;
+    margin-left: 3px;
+    font-size: 36px;
+  }
+
+  .search__description {
+    font-size: 18px;
+    margin-bottom: 122px;
+  }
+
+  .search__button {
+    position: relative;
+    max-width: 452px;
+    margin-top: 16px;
+    margin-bottom: 32px;
+  }
+
+  .search__form {
+    margin: 0;
   }
 }

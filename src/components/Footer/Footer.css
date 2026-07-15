@@ -1,6 +1,6 @@
 .footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding-top: 32px;
   padding-bottom: 26px;
@@ -13,7 +13,7 @@
   padding: 0;
   margin: 0;
   gap: 40px;
-  margin-right: 106px;
+  margin-right: 40px;
 }
 
 .footer__link {
@@ -38,6 +38,7 @@
 
 .footer__copyright {
   margin-left: 104px;
+  margin-right: auto;
 }
 
 .footer__github {
@@ -50,4 +51,48 @@
   background: url("../../images/LinkedIn.png") center transparent no-repeat;
   width: 24px;
   height: 24px;
+}
+
+.footer__social-links {
+  display: flex;
+  list-style-type: none;
+  gap: 26px;
+  padding: 0;
+  margin: 0;
+  margin-right: 106px;
+}
+
+.footer__links-wrapper {
+  display: flex;
+}
+
+/*Media view*/
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-right: 0;
+  }
+
+  .footer__links-wrapper {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .footer__social-links {
+    margin: 0px;
+    gap: 28px;
+  }
+
+  .footer__copyright {
+    margin: 0;
+    margin-top: 38px;
+    font-size: 16px;
+  }
 }

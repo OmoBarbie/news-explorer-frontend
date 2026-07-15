@@ -118,3 +118,23 @@
   box-sizing: border-box;
   font-weight: 500;
 }
+
+/*Mobile view*/
+@media (max-width: 768px) {
+  .card__list-title {
+    font-family: "Roboto Slab", serif;
+    font-weight: 400;
+    font-size: 30px;
+  }
+
+  .card__item {
+    width: 288px;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 10px;
+  }
+
+  .card__image {
+    width: 288px;
+  }
+}
