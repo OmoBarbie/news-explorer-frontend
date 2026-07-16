@@ -119,6 +119,33 @@
   font-weight: 500;
 }
 
+/*Tablet view*/
+@media (min-width: 769px) and (max-width: 1024px) {
+  .card__item {
+    height: 420px;
+    width: 224px;
+  }
+  .card__image {
+    height: 150px;
+  }
+
+  .card__container {
+    width: 224px;
+  }
+
+  .cards__container {
+    gap: 8px;
+  }
+
+  .card__list-title {
+    font-family:
+      "Roboto Slab",
+      sans serif;
+    font-weight: 400;
+    font-size: 30px;
+  }
+}
+
 /*Mobile view*/
 @media (max-width: 768px) {
   .card__list-title {

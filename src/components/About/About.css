@@ -3,7 +3,7 @@
   gap: 56px;
   margin: 0 auto;
   max-width: 1440px;
-  width: 100%;
+  padding-right: 216px;
 }
 
 .about__image {
@@ -31,6 +31,24 @@
 .about__description {
 }
 
+/*Tablet view*/
+@media (min-width: 769px) and (max-width: 1024px) {
+  .about {
+    padding: 40px;
+    gap: 32px;
+  }
+
+  .about__image {
+    width: 232px;
+    height: 232px;
+    margin: 0px;
+  }
+
+  .about__title {
+    margin: 0;
+  }
+}
+
 /*Mobile view*/
 @media (max-width: 768px) {
   .about {
@@ -41,8 +59,8 @@
   }
 
   .about__image {
-    width: 272px;
-    height: 272px;
+    width: 232px;
+    height: 232px;
     margin: 24px;
   }
 

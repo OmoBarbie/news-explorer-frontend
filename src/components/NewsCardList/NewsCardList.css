@@ -14,7 +14,7 @@
 }
 
 .show-more {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 
   border-radius: 80px;
   width: 288px;
@@ -24,6 +24,7 @@
   font-color: #1a1b22;
   font-size: 18px;
   border: none;
+  margin: 0 auto;
 }
 
 .show-more:hover {
@@ -33,6 +34,12 @@
 }
 
 
+/*Tablet view*/
+@media (min-width: 769px) and (max-width: 1024px) {
+  .show-more {
+    
+}
+
 /*Mobile view*/
 @media (max-width: 768px) {
 .cards__container {
@@ -41,5 +48,6 @@
   .show-more {
     margin-top: 16px;
     margin-bottom: 24px;
+    font-size: 14px;
   }
 }
