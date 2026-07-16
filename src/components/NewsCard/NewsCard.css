@@ -1,6 +1,7 @@
 .card__item {
   height: 576px;
-  width: 400px;
+  /* width: 400px; */
+  max-width: 400px;
   border-radius: 16px;
   overflow: hidden;
   color: #b6bcbf;
@@ -9,8 +10,10 @@
 }
 
 .card__image {
+  object-fit: cover;
   height: 272px;
-  width: 400px;
+  width: 100%;
+  /* width: 400px; */
 }
 
 .card__description {
@@ -123,14 +126,14 @@
 @media (min-width: 769px) and (max-width: 1024px) {
   .card__item {
     height: 420px;
-    width: 224px;
+    /* width: 224px; */
   }
   .card__image {
     height: 150px;
   }
 
   .card__container {
-    width: 224px;
+    /* width: 224px; */
   }
 
   .cards__container {
@@ -155,13 +158,13 @@
   }
 
   .card__item {
-    width: 288px;
-    margin-left: 16px;
+    /* width: 288px; */
+    /* margin-left: 16px;
     margin-right: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 10px; */
   }
 
   .card__image {
-    width: 288px;
+    /* width: 288px; */
   }
 }
