@@ -34,6 +34,8 @@
   font-weight: 700;
   font-size: 16px;
   color: #ffffff;
+  z-index: 1001;
+  position: relative;
 }
 
 .mobile-menu__content {
@@ -54,6 +56,12 @@
   font-size: 18px;
   color: white;
   line-height: 56px;
+  z-index: 1001;
+  position: relative;
+}
+
+.mobile-menu__link.active {
+  color: white;
 }
 
 .mobile-menu__sign-in-button {
