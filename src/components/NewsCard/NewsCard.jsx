@@ -44,7 +44,9 @@ const NewsCard = ({ newsArticle, isSaved }) => {
         {isHovered && (
           <div className="card__delete-message">Remove from Saved</div>
         )}
-        <div className="card__keyword">World News</div>
+        {article.keyword && (
+          <div className="card__keyword">{article.keyword}</div>
+        )}
       </div>
     </>
   );

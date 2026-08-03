@@ -15,7 +15,7 @@
 }
 
 .show-more {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 
   border-radius: 80px;
   width: 288px;
@@ -34,21 +34,23 @@
   background-color: #e8e8e8;
 }
 
-
 /*Tablet view*/
 @media (min-width: 769px) and (max-width: 1024px) {
   .show-more {
-    
+  }
 }
 
 /*Mobile view*/
 @media (max-width: 768px) {
-.cards__container {
-  flex-wrap:wrap;
+  .cards__container {
+    flex-wrap: wrap;
+  }
 
   .show-more {
     margin-top: 16px;
     margin-bottom: 24px;
     font-size: 14px;
+    width: 100%;
+    font-size: 16px;
   }
 }

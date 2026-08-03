@@ -56,6 +56,7 @@
     flex-direction: column;
     align-items: center;
     gap: 0px;
+    padding-right: 0px;
   }
 
   .about__image {

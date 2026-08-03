@@ -66,11 +66,12 @@
   display: flex;
 }
 
-/*Media view*/
+/*Mobile view*/
 @media (max-width: 768px) {
   .footer {
     flex-direction: column-reverse;
     align-items: center;
+    margin-top: 128px;
   }
 
   .footer__links {
