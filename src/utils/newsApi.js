@@ -27,3 +27,4 @@ async function searchNews(query) {
 
   return data.articles;
 }
+export default searchNews;

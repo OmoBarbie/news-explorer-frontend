@@ -9,8 +9,14 @@ const Header = ({
   isLoggedIn,
   onSignOut,
   handleCloseModal,
+  onSearch,
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  function handleSubmit(e) {
+    e.preventDefault();
+    onSearch(searchQuery);
+  }
   return (
     <>
       <header className="header">
@@ -70,15 +76,22 @@ const Header = ({
               account.
             </p>
           </div>
-          <form className="search__form">
-            <input type="text" placeholder="nature" className="search__input" />
+          <form className="search__form" onSubmit={handleSubmit}>
+            <input
+              onChange={(e) => setSearchQuery(e.target.value)}
+              type="text"
+              placeholder="nature"
+              className="search__input"
+            />
             <button type="submit" className="search__button">
               Search
             </button>
           </form>
         </div>
       </header>
-     {isMenuOpen && <MobileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} /> }
+      {isMenuOpen && (
+        <MobileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      )}
     </>
   );
 };

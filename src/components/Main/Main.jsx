@@ -5,6 +5,8 @@ import NewsCardList from "../NewsCardList/NewsCardList";
 import "./Main.css";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import LoginModal from "../LoginModal/LoginModal";
+import searchNews from "../../utils/newsApi";
+import { useState } from "react";
 
 const Main = ({
   handleLoginClick,
@@ -12,15 +14,33 @@ const Main = ({
   onSignOut,
   handleCloseModal,
 }) => {
+  const [articles, setArticles] = useState([]);
+  const [status, setStatus] = useState("idle");
+  const [error, setError] = useState(null);
+  async function handleSearch(query) {
+    setStatus("loading");
+    setError(null);
+
+    try {
+      const articles = await searchNews(query);
+      setArticles(articles);
+      setStatus("success");
+    } catch (err) {
+      setError(err.message);
+      setStatus("error");
+    }
+  }
+
   return (
     <>
       <Header
         handleLoginClick={handleLoginClick}
         handleCloseModal={handleCloseModal}
+        onSearch={handleSearch}
       />
       <section className="main">
         <div className="main__list">
-          <NewsCardList />
+          <NewsCardList articles={articles} status={status} error={error} />
         </div>
       </section>
       <About></About>
