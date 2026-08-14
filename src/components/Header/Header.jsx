@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./Header.css";
 import MobileMenu from "../MobileMenu/MobileMenu.jsx";
 import { useState } from "react";
+import SearchForm from "../SearchForm/SearchForm";
 // import logoPath from "../../images/logo.svg";
 
 const Header = ({
@@ -68,26 +69,12 @@ const Header = ({
             </ul>
           </nav>
         </div>
-        <div className="search">
-          <div className="search__container">
-            <h2 className="search__title">What's going on in the world?</h2>
-            <p className="search__description">
-              Find the latest news on any topic and save them in your personal
-              account.
-            </p>
-          </div>
-          <form className="search__form" onSubmit={handleSubmit}>
-            <input
-              onChange={(e) => setSearchQuery(e.target.value)}
-              type="text"
-              placeholder="nature"
-              className="search__input"
-            />
-            <button type="submit" className="search__button">
-              Search
-            </button>
-          </form>
-        </div>
+        <SearchForm
+          onSearch={onSearch}
+          searchQuery={searchQuery}
+          onSearchChange={setSearchQuery}
+          onSearchSubmit={handleSubmit}
+        />
       </header>
       {isMenuOpen && (
         <MobileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />

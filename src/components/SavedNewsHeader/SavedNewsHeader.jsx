@@ -19,7 +19,12 @@ const SavedNewsHeader = ({
         </Link>
 
         {/* RIGHT SIDE */}
+
         <nav className="navigation">
+          <button
+            onClick={() => setIsMenuOpen(true)}
+            className="navigation__menu-button_location_saved-news"
+          />
           <ul className="navigation__list-savednews-header">
             <li>
               <Link to="/" className="navigation__link_location_saved-news">

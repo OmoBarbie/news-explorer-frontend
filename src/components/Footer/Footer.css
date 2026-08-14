@@ -79,11 +79,13 @@
     flex-direction: column;
     gap: 16px;
     margin-right: 0;
+    padding-left: 16px;
   }
 
   .footer__links-wrapper {
     justify-content: space-between;
     width: 100%;
+    padding-right: 16px;
   }
 
   .footer__social-links {

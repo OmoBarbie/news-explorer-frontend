@@ -39,8 +39,8 @@ const NewsCardList = ({ articles, status, error }) => {
     <>
       <h2 className="card__list-title">Search results</h2>
       <ul className="cards__container">
-        {visibleArticles.map((article) => (
-          <li className="card__container" key={article.id}>
+        {visibleArticles.map((article, index) => (
+          <li className="card__container" key={`${article.id}-${index}`}>
             <NewsCard newsArticle={article} />
           </li>
         ))}

@@ -25,7 +25,7 @@
   padding-right: 109px;
 }
 
-.navigatiion {
+.navigation {
 }
 
 .navigation__list {
@@ -60,84 +60,6 @@
   padding-bottom: 26px;
 }
 
-.search {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.search__title {
-  font-size: 60px;
-  font-family: "Roboto Slab", serif;
-  font-weight: 400;
-  max-width: 608px;
-  line-height: 64px;
-  margin: 0;
-  margin-bottom: 32px;
-  margin-top: 80px;
-}
-
-.search__description {
-  margin: 0;
-  margin-bottom: 88px;
-}
-
-.search__container {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-}
-
-.search__form {
-  margin-bottom: 80px;
-  position: relative;
-  max-width: 608px;
-  width: 100%;
-}
-
-.search__input {
-  width: 608px;
-  height: 64px;
-  border: 1px #d1d2d6;
-  border-radius: 100px;
-  padding-left: 24px;
-  color: #1a1b22;
-  font-size: 16px;
-  font-weight: 400px;
-  box-sizing: border-box;
-}
-
-.search__input::placeholder {
-  color: #b6bcbf;
-
-  font-size: 16px;
-  font-weight: 400px;
-}
-
-.search__button {
-  background-color: #2f71e5;
-  color: #ffffff;
-  border-radius: 100px;
-  width: 168px;
-  height: 66px;
-  font-size: 18px;
-  position: absolute;
-  right: 0px;
-  border: 1px #2f71e5;
-}
-
-.search__button:hover {
-  background-color: #347eff;
-  cursor: pointer;
-  border: none;
-}
-
-.search__button:active {
-  background-color: #2a65cc;
-  cursor: pointer;
-  border: none;
-}
-
 .navigation__menu-button {
   background-image: url("../../images/hamburgermenuicon.svg");
   background-color: transparent;
@@ -153,45 +75,6 @@
     font-size: 16px;
     padding-top: 22px;
     padding-bottom: 20px;
-  }
-
-  .search__container {
-    max-width: 452px;
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  .search__input {
-    width: 100%;
-    max-width: 452px;
-    font-size: 18px;
-    height: 56px;
-  }
-
-  .search__form {
-    max-width: 452px;
-    width: 100%;
-  }
-
-  .search__title {
-    font-size: 36px;
-    line-height: 40px;
-    margin-bottom: 16px;
-  }
-
-  .search__description {
-    margin-bottom: 48px;
-    font-size: 18px;
-  }
-
-  .search__button {
-    width: 100%;
-    max-width: 160px;
-    height: 50px;
-    font-size: 16px;
-    bottom: 0px;
-    right: 0px;
-    height: 56px;
   }
 }
 
@@ -214,27 +97,5 @@
     background-position: center;
     height: 24px;
     width: 24px;
-  }
-
-  .search__title {
-    margin-top: 30px;
-    margin-left: 3px;
-    font-size: 36px;
-  }
-
-  .search__description {
-    font-size: 18px;
-    margin-bottom: 122px;
-  }
-
-  .search__button {
-    position: relative;
-    max-width: 452px;
-    margin-top: 16px;
-    margin-bottom: 32px;
-  }
-
-  .search__form {
-    margin: 0;
   }
 }

@@ -5,11 +5,15 @@ import { useState } from "react";
 const NewsCard = ({ newsArticle, isSaved }) => {
   const article = newsArticle;
   const [isBookmarked, setIsBookmarked] = useState(false);
+  const [isDeleted, setIsDeleted] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
   const toggleBookmark = () => {
     setIsBookmarked(!isBookmarked);
   };
+  if (isDeleted === true) {
+    return null;
+  }
 
   return (
     <>
@@ -31,7 +35,7 @@ const NewsCard = ({ newsArticle, isSaved }) => {
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
               className="card__remove-bookmark-button"
-              onClick={toggleBookmark}
+              onClick={() => setIsDeleted(true)}
             ></button>
           )}
           {!isSaved && (

@@ -13,3 +13,11 @@
   padding-top: 62px;
   padding-bottom: 62px;
 }
+
+/*mobile view*/
+@media (max-width: 768px) {
+  .saved-news__list {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
