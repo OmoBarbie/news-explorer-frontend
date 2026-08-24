@@ -14,12 +14,15 @@ const Main = ({
   onSignOut,
   handleCloseModal,
   setSavedArticles,
+  setSearchQuery,
+  searchQuery,
 }) => {
   const [articles, setArticles] = useState([]);
   const [status, setStatus] = useState("idle");
   const [error, setError] = useState(null);
   async function handleSearch(query) {
     setStatus("loading");
+    setSearchQuery(query);
     setError(null);
 
     try {
@@ -47,6 +50,7 @@ const Main = ({
             status={status}
             error={error}
             setSavedArticles={setSavedArticles}
+            searchQuery={searchQuery}
           />
         </div>
       </section>

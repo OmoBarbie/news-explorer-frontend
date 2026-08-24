@@ -1,7 +1,6 @@
 import "./SearchForm.css";
 
 function SearchForm({ searchQuery, onSearchChange, onSearchSubmit }) {
-  //   const [searchQuery, setSearchQuery] = useState("");
   function handleSubmit(e) {
     e.preventDefault();
     onSearch(searchQuery);

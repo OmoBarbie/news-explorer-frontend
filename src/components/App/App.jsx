@@ -12,6 +12,7 @@ function App() {
   const [activeModal, setActiveModal] = useState(null);
   const [savedArticles, setSavedArticles] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const handleOpenLogin = () => setActiveModal("login");
   const handleOpenRegister = () => setActiveModal("register");
@@ -22,6 +23,8 @@ function App() {
     setIsLoggedIn(true);
     setActiveModal(null);
   };
+
+  console.log(savedArticles);
 
   // ESC key close
   useEffect(() => {
@@ -47,6 +50,8 @@ function App() {
                 handleCloseModal={handleCloseModal}
                 setSavedArticles={setSavedArticles}
                 isLoggedIn={isLoggedIn}
+                searchQuery={searchQuery}
+                setSearchQuery={setSearchQuery}
               />
             }
           />

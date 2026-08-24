@@ -4,7 +4,13 @@ import { mockArticles } from "../../utils/mockdata";
 import Preloader from "../Preloader/Preloader";
 import { useState, useEffect } from "react";
 
-const NewsCardList = ({ articles, status, error, setSavedArticles }) => {
+const NewsCardList = ({
+  articles,
+  status,
+  error,
+  setSavedArticles,
+  searchQuery,
+}) => {
   const [cardsVisible, setCardsVisible] = useState(3);
   useEffect(() => {
     setCardsVisible(3);
@@ -35,8 +41,7 @@ const NewsCardList = ({ articles, status, error, setSavedArticles }) => {
 
   const visibleArticles = articles.slice(0, cardsVisible);
   const handleSaveArticles = (article) => {
-    setSavedArticles((prev) => [...prev, article]);
-    console.log(article);
+    setSavedArticles((prev) => [...prev, { ...article, keyword: searchQuery }]);
   };
 
   return (
