@@ -8,6 +8,7 @@ function LoginModal({
   title,
   buttonText,
   altText,
+  handleSubmit,
 }) {
   return (
     <ModalWithForm
@@ -17,6 +18,7 @@ function LoginModal({
       title={title}
       buttonText={buttonText}
       altText={altText}
+      handleSubmit={handleSubmit}
     >
       <label className="modal__label">
         Email

@@ -66,6 +66,7 @@ function App() {
           title={"Sign in"}
           buttonText={"Sign in"}
           altText={"Sign up"}
+          handleSubmit={handleLogIn}
         />
       )}
       {activeModal === "register" && (

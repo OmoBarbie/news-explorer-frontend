@@ -1,14 +1,10 @@
 import "./About.css";
-import Placeholderimage from "../../images/placeholderimage.png";
+import authorImage from "../../images/TayoHeadshot.jpg";
 
 const About = () => {
   return (
     <section className="about">
-      <img
-        className="about__image"
-        alt="About the author"
-        src={Placeholderimage}
-      />
+      <img className="about__image" alt="About the author" src={authorImage} />
       <div className="about__content">
         <h2 className="about__title">About the author</h2>
         <p className="about__description">
