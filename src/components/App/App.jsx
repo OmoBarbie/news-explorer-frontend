@@ -11,12 +11,17 @@ import RegistrationSuccessModal from "../RegistrationSuccessModal/RegistrationSu
 function App() {
   const [activeModal, setActiveModal] = useState(null);
   const [savedArticles, setSavedArticles] = useState([]);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleOpenLogin = () => setActiveModal("login");
   const handleOpenRegister = () => setActiveModal("register");
   const handleRegistrationSuccess = () =>
     setActiveModal("registration-success");
   const handleCloseModal = () => setActiveModal(null);
+  const handleLogIn = () => {
+    setIsLoggedIn(true);
+    setActiveModal(null);
+  };
 
   // ESC key close
   useEffect(() => {
@@ -41,6 +46,7 @@ function App() {
                 handleLoginClick={handleOpenLogin}
                 handleCloseModal={handleCloseModal}
                 setSavedArticles={setSavedArticles}
+                isLoggedIn={isLoggedIn}
               />
             }
           />

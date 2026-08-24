@@ -38,6 +38,7 @@ const Main = ({
         handleLoginClick={handleLoginClick}
         handleCloseModal={handleCloseModal}
         onSearch={handleSearch}
+        isLoggedIn={isLoggedIn}
       />
       <section className="main">
         <div className="main__list">
