@@ -4,7 +4,7 @@ import { mockArticles } from "../../utils/mockdata";
 import Preloader from "../Preloader/Preloader";
 import { useState, useEffect } from "react";
 
-const NewsCardList = ({ articles, status, error }) => {
+const NewsCardList = ({ articles, status, error, setSavedArticles }) => {
   const [cardsVisible, setCardsVisible] = useState(3);
   useEffect(() => {
     setCardsVisible(3);
@@ -34,6 +34,10 @@ const NewsCardList = ({ articles, status, error }) => {
   }
 
   const visibleArticles = articles.slice(0, cardsVisible);
+  const handleSaveArticles = (article) => {
+    setSavedArticles((prev) => [...prev, article]);
+    console.log(article);
+  };
 
   return (
     <>
@@ -41,7 +45,7 @@ const NewsCardList = ({ articles, status, error }) => {
       <ul className="cards__container">
         {visibleArticles.map((article, index) => (
           <li className="card__container" key={`${article.id}-${index}`}>
-            <NewsCard newsArticle={article} />
+            <NewsCard newsArticle={article} onSave={handleSaveArticles} />
           </li>
         ))}
       </ul>

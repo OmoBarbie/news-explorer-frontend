@@ -1,8 +1,7 @@
 import "./NewsCard.css";
-import { mockArticles } from "../../utils/mockdata";
 import { useState } from "react";
 
-const NewsCard = ({ newsArticle, isSaved }) => {
+const NewsCard = ({ newsArticle, isSaved, onSave }) => {
   const article = newsArticle;
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [isDeleted, setIsDeleted] = useState(false);
@@ -10,6 +9,7 @@ const NewsCard = ({ newsArticle, isSaved }) => {
 
   const toggleBookmark = () => {
     setIsBookmarked(!isBookmarked);
+    onSave(article);
   };
   if (isDeleted === true) {
     return null;

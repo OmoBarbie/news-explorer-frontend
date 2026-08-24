@@ -13,6 +13,7 @@ const Main = ({
   isLoggedIn,
   onSignOut,
   handleCloseModal,
+  setSavedArticles,
 }) => {
   const [articles, setArticles] = useState([]);
   const [status, setStatus] = useState("idle");
@@ -40,7 +41,12 @@ const Main = ({
       />
       <section className="main">
         <div className="main__list">
-          <NewsCardList articles={articles} status={status} error={error} />
+          <NewsCardList
+            articles={articles}
+            status={status}
+            error={error}
+            setSavedArticles={setSavedArticles}
+          />
         </div>
       </section>
       <About></About>

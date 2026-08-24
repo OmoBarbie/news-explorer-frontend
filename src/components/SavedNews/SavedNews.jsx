@@ -4,11 +4,11 @@ import SavedNewsCardsList from "../SavedNewsCardsList/SavedNewsCardsList";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 
-const SavedNews = ({}) => {
+const SavedNews = ({ savedArticles }) => {
   return (
     <div className="saved-news">
       <SavedNewsHeader />
-      <SavedNewsCardsList />
+      <SavedNewsCardsList savedArticles={savedArticles} />
       <Footer></Footer>
     </div>
   );

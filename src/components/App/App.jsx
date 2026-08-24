@@ -10,6 +10,7 @@ import RegistrationSuccessModal from "../RegistrationSuccessModal/RegistrationSu
 
 function App() {
   const [activeModal, setActiveModal] = useState(null);
+  const [savedArticles, setSavedArticles] = useState([]);
 
   const handleOpenLogin = () => setActiveModal("login");
   const handleOpenRegister = () => setActiveModal("register");
@@ -39,10 +40,14 @@ function App() {
               <Main
                 handleLoginClick={handleOpenLogin}
                 handleCloseModal={handleCloseModal}
+                setSavedArticles={setSavedArticles}
               />
             }
           />
-          <Route path="/saved-news" element={<SavedNews />} />
+          <Route
+            path="/saved-news"
+            element={<SavedNews savedArticles={savedArticles} />}
+          />
         </Routes>
       </BrowserRouter>
 
