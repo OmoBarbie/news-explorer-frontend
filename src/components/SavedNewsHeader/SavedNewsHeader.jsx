@@ -7,6 +7,7 @@ const SavedNewsHeader = ({
   isLoggedIn = true,
   onSignOut,
   handleCloseModal,
+  keywordList,
 }) => {
   return (
     <header className="header_location_saved-news">
@@ -71,7 +72,7 @@ const SavedNewsHeader = ({
         <p className="saved-news__keywords">
           {"By keywords: "}
           <span className="saved-news__keywords_bold">
-            Nature, Yellowstone, and 2 others
+            {Array.from(keywordList).join(", ")}
           </span>
         </p>
       </div>

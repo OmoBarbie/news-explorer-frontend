@@ -7,6 +7,7 @@ import SavedNews from "../SavedNews/SavedNews";
 import LoginModal from "../LoginModal/LoginModal";
 import RegisterModal from "../RegisterModal/RegisterModal";
 import RegistrationSuccessModal from "../RegistrationSuccessModal/RegistrationSuccessModal";
+import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
 
 function App() {
   const [activeModal, setActiveModal] = useState(null);
@@ -25,6 +26,10 @@ function App() {
   };
 
   console.log(savedArticles);
+  const onSignOut = () => {
+    setIsLoggedIn(false);
+    setSavedArticles([]);
+  };
 
   // ESC key close
   useEffect(() => {
@@ -52,12 +57,20 @@ function App() {
                 isLoggedIn={isLoggedIn}
                 searchQuery={searchQuery}
                 setSearchQuery={setSearchQuery}
+                onSignOut={onSignOut}
               />
             }
           />
           <Route
             path="/saved-news"
-            element={<SavedNews savedArticles={savedArticles} />}
+            element={
+              <ProtectedRoute isLoggedIn={isLoggedIn}>
+                <SavedNews
+                  savedArticles={savedArticles}
+                  onSignOut={onSignOut}
+                />
+              </ProtectedRoute>
+            }
           />
         </Routes>
       </BrowserRouter>

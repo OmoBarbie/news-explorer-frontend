@@ -4,10 +4,13 @@ import SavedNewsCardsList from "../SavedNewsCardsList/SavedNewsCardsList";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 
-const SavedNews = ({ savedArticles }) => {
+const SavedNews = ({ savedArticles, onSignOut }) => {
   return (
     <div className="saved-news">
-      <SavedNewsHeader />
+      <SavedNewsHeader
+        keywordList={new Set(savedArticles.map((article) => article.keyword))}
+        onSignOut={onSignOut}
+      />
       <SavedNewsCardsList savedArticles={savedArticles} />
       <Footer></Footer>
     </div>
