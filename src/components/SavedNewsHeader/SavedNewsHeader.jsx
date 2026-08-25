@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./SavedNewsHeader.css";
-// import logoPath from "../../images/logo.svg";
+import whiteLogOutIcon from "../../images/logout-icon.svg";
 
 const SavedNewsHeader = ({
   handleLoginClick,
@@ -45,11 +45,24 @@ const SavedNewsHeader = ({
                   </Link>
                 </li>
                 <li>
-                  <button
+                  {/* <button
                     onClick={onSignOut}
                     className="navigation__button_location_saved-news"
                   >
                     Sign Out
+                  </button> */}
+                  <button
+                    onClick={onSignOut}
+                    className="navigation__button navigation__button-saved-news "
+                  >
+                    <p className="navigation__button-text navigation__button-text_color-black">
+                      User
+                    </p>
+                    <img
+                      className="navigation__button-logout-icon"
+                      src={whiteLogOutIcon}
+                      alt="Log out"
+                    />
                   </button>
                 </li>
               </>

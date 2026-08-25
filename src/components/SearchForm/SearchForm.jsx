@@ -20,6 +20,7 @@ function SearchForm({ searchQuery, onSearchChange, onSearchSubmit }) {
           onChange={(e) => onSearchChange(e.target.value)}
           type="text"
           className="search__input"
+          placeholder="Enter topic"
         />
         <button type="submit" className="search__button">
           Search

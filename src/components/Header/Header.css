@@ -38,6 +38,9 @@
 }
 
 .navigation__button {
+  justify-content: center;
+  align-items: center;
+  display: flex;
   background: none;
   border: none;
   cursor: pointer;
@@ -48,6 +51,30 @@
   border: 1px solid #ffffff;
   width: 152px;
   border-radius: 100px;
+  gap: 15px;
+  height: 48px;
+  box-sizing: border-box;
+}
+
+.navigation__button-logout-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.navigation__button-text {
+  font-family: "Roboto" Sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.navigation__button-text_color-black {
+  color: #1a1b22;
+}
+
+.navigation__button-saved-news {
+  color: #1a1b22;
+  border-color: #1a1b22;
 }
 
 .navigation__link {

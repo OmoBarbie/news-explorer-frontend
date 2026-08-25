@@ -3,7 +3,7 @@ import "./Header.css";
 import MobileMenu from "../MobileMenu/MobileMenu.jsx";
 import { useState } from "react";
 import SearchForm from "../SearchForm/SearchForm";
-// import logoPath from "../../images/logo.svg";
+import whiteLogOutIcon from "../../images/white-logout-icon.svg";
 
 const Header = ({
   handleLoginClick,
@@ -52,7 +52,12 @@ const Header = ({
                   </li>
                   <li>
                     <button onClick={onSignOut} className="navigation__button">
-                      Sign Out
+                      <p className="navigation__button-text">User</p>
+                      <img
+                        className="navigation__button-logout-icon"
+                        src={whiteLogOutIcon}
+                        alt="Log out"
+                      />
                     </button>
                   </li>
                 </>
