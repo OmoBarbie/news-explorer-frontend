@@ -3,7 +3,12 @@ import { NavLink } from "react-router-dom";
 import "./MobileMenu.css";
 // import logoPath from "../../images/logo.svg";
 
-const MobileMenu = ({ isMenuOpen, setIsMenuOpen }) => {
+const MobileMenu = ({
+  isMenuOpen,
+  setIsMenuOpen,
+  handleLoginClick,
+  handleCloseModal,
+}) => {
   return (
     <div className={`mobile-menu ${isMenuOpen ? "mobile-menu_open" : ""}`}>
       <button
@@ -28,7 +33,10 @@ const MobileMenu = ({ isMenuOpen, setIsMenuOpen }) => {
           </NavLink>
           <button
             className="mobile-menu__sign-in-button"
-            onClick={() => setIsMenuOpen(false)}
+            onClick={() => {
+              setIsMenuOpen(false);
+              handleLoginClick();
+            }}
           >
             Sign in
           </button>

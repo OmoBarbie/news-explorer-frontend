@@ -82,7 +82,11 @@ const Header = ({
         />
       </header>
       {isMenuOpen && (
-        <MobileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+        <MobileMenu
+          isMenuOpen={isMenuOpen}
+          setIsMenuOpen={setIsMenuOpen}
+          handleLoginClick={handleLoginClick}
+        />
       )}
     </>
   );
