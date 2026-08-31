@@ -1,7 +1,6 @@
 import "./Preloader.css";
 
 function Preloader() {
-  const isloading = true;
   return (
     <div className="preloader">
       <div className="preloader__circle"></div>
