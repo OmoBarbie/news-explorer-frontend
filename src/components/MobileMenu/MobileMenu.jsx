@@ -10,10 +10,10 @@ const MobileMenu = ({
   handleLogoutClick,
 }) => {
   const { isLoggedIn } = useContext(CurrentUserContext);
-  const signOut = () => {
-    handleLogoutClick();
-  };
-  console.log(isLoggedIn);
+  // // const signOut = () => {
+  // //   handleLogoutClick();
+  // // };
+  // console.log(isLoggedIn);
 
   return (
     <div className={`mobile-menu ${isMenuOpen ? "mobile-menu_open" : ""}`}>

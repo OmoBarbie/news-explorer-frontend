@@ -17,6 +17,7 @@ function SearchForm({ searchQuery, onSearchChange, onSearchSubmit }) {
       </div>
       <form className="search__form" onSubmit={onSearchSubmit}>
         <input
+          value={searchQuery}
           onChange={(e) => onSearchChange(e.target.value)}
           type="text"
           className="search__input"
