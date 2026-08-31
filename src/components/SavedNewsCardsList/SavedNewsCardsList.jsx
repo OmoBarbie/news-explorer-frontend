@@ -6,7 +6,7 @@ const SavedNewsCardsList = ({ savedArticles }) => {
     <section className="saved-news__container">
       <ul className="saved-news__list">
         {savedArticles.map((article) => (
-          <li className="saved-news__item" key={article.id}>
+          <li className="saved-news__item" key={article.url}>
             <NewsCard newsArticle={article} isSaved={true} />
           </li>
         ))}
