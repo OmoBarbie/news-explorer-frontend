@@ -41,7 +41,7 @@ const Header = ({ handleLoginClick, isLoggedIn, onSignOut, onSearch }) => {
                 <>
                   <li>
                     <Link to="/saved-news" className="navigation__link">
-                      Saved Articles
+                      Saved articles
                     </Link>
                   </li>
                   <li>

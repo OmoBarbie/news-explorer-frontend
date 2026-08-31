@@ -82,6 +82,10 @@
   font-size: 18px;
 }
 
+.navigation__link_saved {
+  font-style: italic;
+}
+
 .navigation__link_active {
   border-bottom: 3px solid #ffffff;
   padding-bottom: 26px;

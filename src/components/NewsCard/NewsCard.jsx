@@ -26,7 +26,13 @@ const NewsCard = ({ newsArticle, isSaved, onSave }) => {
           />
 
           <div className="card__details">
-            <p className="card__date">{article.publishedAt}</p>
+            <p className="card__date">
+              {new Date(article.publishedAt).toLocaleDateString("en-US", {
+                month: "long",
+                day: "numeric",
+                year: "numeric",
+              })}
+            </p>
             <h3 className="card__title">{article.title}</h3>
             <p className="card__description">{article.description}</p>
             <p className="card__source">{article.source.name}</p>

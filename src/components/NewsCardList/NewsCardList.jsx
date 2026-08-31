@@ -2,7 +2,7 @@ import "./NewsCardList.css";
 import NewsCard from "../NewsCard/NewsCard";
 
 import Preloader from "../Preloader/Preloader";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const NewsCardList = ({
   articles,
@@ -12,9 +12,9 @@ const NewsCardList = ({
   searchQuery,
 }) => {
   const [cardsVisible, setCardsVisible] = useState(3);
-  useEffect(() => {
-    setCardsVisible(3);
-  }, [articles]);
+  // useEffect(() => {
+  //   setCardsVisible(3);
+  // }, [articles]);
 
   if (status === "loading") {
     return <Preloader />;
