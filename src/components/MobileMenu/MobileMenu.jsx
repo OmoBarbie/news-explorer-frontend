@@ -13,6 +13,7 @@ const MobileMenu = ({
   const signOut = () => {
     handleLogoutClick();
   };
+  console.log(isLoggedIn);
 
   return (
     <div className={`mobile-menu ${isMenuOpen ? "mobile-menu_open" : ""}`}>
@@ -36,16 +37,26 @@ const MobileMenu = ({
           >
             Home
           </NavLink>
+
           {isLoggedIn ? (
-            <button
-              className="mobile-menu__sign-in-button"
-              onClick={() => {
-                setIsMenuOpen(false);
-                handleLogoutClick();
-              }}
-            >
-              Log Out
-            </button>
+            <>
+              <NavLink
+                to="/saved-news"
+                className="mobile-menu__link"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Saved News
+              </NavLink>
+              <button
+                className="mobile-menu__sign-in-button"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  handleLogoutClick();
+                }}
+              >
+                Log Out
+              </button>
+            </>
           ) : (
             <button
               className="mobile-menu__sign-in-button"

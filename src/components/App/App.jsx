@@ -28,7 +28,6 @@ function App() {
 
   console.log(savedArticles);
   const onSignOut = () => {
-    console.log("Signing out...");
     setIsLoggedIn(false);
     setSavedArticles([]);
   };
