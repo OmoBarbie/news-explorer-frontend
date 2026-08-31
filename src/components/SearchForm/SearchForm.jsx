@@ -1,10 +1,10 @@
 import "./SearchForm.css";
 
 function SearchForm({ searchQuery, onSearchChange, onSearchSubmit }) {
-  function handleSubmit(e) {
-    e.preventDefault();
-    onSearch(searchQuery);
-  }
+  //   function handleSubmit(e) {
+  //     e.preventDefault();
+  //     onSearch(searchQuery);
+  //   }
 
   return (
     <div className="search">
