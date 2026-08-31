@@ -95,7 +95,12 @@ const SavedNewsHeader = ({
         </div>
       </header>
       {isMenuOpen && (
-        <MobileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+        <MobileMenu
+          isMenuOpen={isMenuOpen}
+          setIsMenuOpen={setIsMenuOpen}
+          handleLoginClick={null}
+          handleLogoutClick={onSignOut}
+        />
       )}
     </>
   );

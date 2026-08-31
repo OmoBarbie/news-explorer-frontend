@@ -8,6 +8,7 @@ import LoginModal from "../LoginModal/LoginModal";
 import RegisterModal from "../RegisterModal/RegisterModal";
 import RegistrationSuccessModal from "../RegistrationSuccessModal/RegistrationSuccessModal";
 import ProtectedRoute from "../ProtectedRoute/ProtectedRoute";
+import CurrentUserContext from "../../context/CurrentUserContext";
 
 function App() {
   const [activeModal, setActiveModal] = useState(null);
@@ -27,6 +28,7 @@ function App() {
 
   console.log(savedArticles);
   const onSignOut = () => {
+    console.log("Signing out...");
     setIsLoggedIn(false);
     setSavedArticles([]);
   };
@@ -45,70 +47,72 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Main
-                handleLoginClick={handleOpenLogin}
-                handleCloseModal={handleCloseModal}
-                setSavedArticles={setSavedArticles}
-                isLoggedIn={isLoggedIn}
-                searchQuery={searchQuery}
-                setSearchQuery={setSearchQuery}
-                onSignOut={onSignOut}
-              />
-            }
-          />
-          <Route
-            path="/saved-news"
-            element={
-              <ProtectedRoute isLoggedIn={isLoggedIn}>
-                <SavedNews
-                  savedArticles={savedArticles}
+      <CurrentUserContext.Provider value={{ isLoggedIn }}>
+        <BrowserRouter>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Main
+                  handleLoginClick={handleOpenLogin}
+                  handleCloseModal={handleCloseModal}
+                  setSavedArticles={setSavedArticles}
+                  isLoggedIn={isLoggedIn}
+                  searchQuery={searchQuery}
+                  setSearchQuery={setSearchQuery}
                   onSignOut={onSignOut}
                 />
-              </ProtectedRoute>
-            }
-          />
-        </Routes>
-      </BrowserRouter>
+              }
+            />
+            <Route
+              path="/saved-news"
+              element={
+                <ProtectedRoute>
+                  <SavedNews
+                    savedArticles={savedArticles}
+                    onSignOut={onSignOut}
+                  />
+                </ProtectedRoute>
+              }
+            />
+          </Routes>
+        </BrowserRouter>
 
-      {/* MODALS LIVE HERE */}
-      {activeModal === "login" && (
-        <LoginModal
-          isOpen={true}
-          handleCloseModal={handleCloseModal}
-          handleOpenRegister={handleOpenRegister}
-          title={"Sign in"}
-          buttonText={"Sign in"}
-          altText={"Sign up"}
-          handleSubmit={handleLogIn}
-        />
-      )}
-      {activeModal === "register" && (
-        <RegisterModal
-          isOpen={true}
-          handleCloseModal={handleCloseModal}
-          handleOpenLogin={handleOpenLogin}
-          handleRegistrationSuccess={handleRegistrationSuccess}
-          title={"Sign up"}
-          buttonText={"Sign up"}
-          altText={"Sign in"}
-        />
-      )}
-      {activeModal === "registration-success" && (
-        <RegistrationSuccessModal
-          isOpen={true}
-          handleCloseModal={handleCloseModal}
-          handleOpenLogin={handleOpenLogin}
-          title={"Registration successfully completed!"}
-          buttonText={"Continue to Login"}
-          altText={"Sign in"}
-          renderSubmit={false}
-        />
-      )}
+        {/* MODALS LIVE HERE */}
+        {activeModal === "login" && (
+          <LoginModal
+            isOpen={true}
+            handleCloseModal={handleCloseModal}
+            handleOpenRegister={handleOpenRegister}
+            title={"Sign in"}
+            buttonText={"Sign in"}
+            altText={"Sign up"}
+            handleSubmit={handleLogIn}
+          />
+        )}
+        {activeModal === "register" && (
+          <RegisterModal
+            isOpen={true}
+            handleCloseModal={handleCloseModal}
+            handleOpenLogin={handleOpenLogin}
+            handleRegistrationSuccess={handleRegistrationSuccess}
+            title={"Sign up"}
+            buttonText={"Sign up"}
+            altText={"Sign in"}
+          />
+        )}
+        {activeModal === "registration-success" && (
+          <RegistrationSuccessModal
+            isOpen={true}
+            handleCloseModal={handleCloseModal}
+            handleOpenLogin={handleOpenLogin}
+            title={"Registration successfully completed!"}
+            buttonText={"Continue to Login"}
+            altText={"Sign in"}
+            renderSubmit={false}
+          />
+        )}
+      </CurrentUserContext.Provider>
     </>
   );
 }

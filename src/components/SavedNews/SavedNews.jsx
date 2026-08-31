@@ -1,4 +1,4 @@
-git import "./SavedNews.css";
+import "./SavedNews.css";
 import SavedNewsHeader from "../SavedNewsHeader/SavedNewsHeader";
 import SavedNewsCardsList from "../SavedNewsCardsList/SavedNewsCardsList";
 import Footer from "../Footer/Footer";

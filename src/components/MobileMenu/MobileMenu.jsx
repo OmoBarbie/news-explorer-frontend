@@ -1,14 +1,19 @@
-// import { Link } from "react-router-dom";
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import "./MobileMenu.css";
-// import logoPath from "../../images/logo.svg";
+import CurrentUserContext from "../../context/CurrentUserContext";
 
 const MobileMenu = ({
   isMenuOpen,
   setIsMenuOpen,
   handleLoginClick,
-  handleCloseModal,
+  handleLogoutClick,
 }) => {
+  const { isLoggedIn } = useContext(CurrentUserContext);
+  const signOut = () => {
+    handleLogoutClick();
+  };
+
   return (
     <div className={`mobile-menu ${isMenuOpen ? "mobile-menu_open" : ""}`}>
       <button
@@ -31,15 +36,27 @@ const MobileMenu = ({
           >
             Home
           </NavLink>
-          <button
-            className="mobile-menu__sign-in-button"
-            onClick={() => {
-              setIsMenuOpen(false);
-              handleLoginClick();
-            }}
-          >
-            Sign in
-          </button>
+          {isLoggedIn ? (
+            <button
+              className="mobile-menu__sign-in-button"
+              onClick={() => {
+                setIsMenuOpen(false);
+                handleLogoutClick();
+              }}
+            >
+              Log Out
+            </button>
+          ) : (
+            <button
+              className="mobile-menu__sign-in-button"
+              onClick={() => {
+                setIsMenuOpen(false);
+                handleLoginClick();
+              }}
+            >
+              Sign in
+            </button>
+          )}
         </nav>
       </div>
     </div>

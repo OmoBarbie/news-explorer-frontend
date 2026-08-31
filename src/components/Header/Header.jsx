@@ -5,13 +5,7 @@ import { useState } from "react";
 import SearchForm from "../SearchForm/SearchForm";
 import whiteLogOutIcon from "../../images/white-logout-icon.svg";
 
-const Header = ({
-  handleLoginClick,
-  isLoggedIn,
-  onSignOut,
-  handleCloseModal,
-  onSearch,
-}) => {
+const Header = ({ handleLoginClick, isLoggedIn, onSignOut, onSearch }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   function handleSubmit(e) {
@@ -86,6 +80,7 @@ const Header = ({
           isMenuOpen={isMenuOpen}
           setIsMenuOpen={setIsMenuOpen}
           handleLoginClick={handleLoginClick}
+          handleLogoutClick={onSignOut}
         />
       )}
     </>
