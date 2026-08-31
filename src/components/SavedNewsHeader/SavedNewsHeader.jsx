@@ -8,7 +8,6 @@ const SavedNewsHeader = ({
   handleLoginClick,
   isLoggedIn = true,
   onSignOut,
-  handleCloseModal,
   keywordList,
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
