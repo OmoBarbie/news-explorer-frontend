@@ -1,6 +1,6 @@
 import "./NewsCardList.css";
 import NewsCard from "../NewsCard/NewsCard";
-import { mockArticles } from "../../utils/mockdata";
+
 import Preloader from "../Preloader/Preloader";
 import { useState, useEffect } from "react";
 
