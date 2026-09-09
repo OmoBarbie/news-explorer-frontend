@@ -114,7 +114,8 @@ GitHub Pages:
 
 Software Engineer | AI Solutions Associate | Technical Customer Success Professional
 
-LinkedIn: _(Optional)_
-
 GitHub: https://github.com/OmoBarbie
-Presentation vido: https://www.loom.com/share/b8c6c1abdfde4b5b9c52b048046c402e
+
+## Project Pitch Video
+
+Check out this video https://www.loom.com/share/b8c6c1abdfde4b5b9c52b048046c402e, where I describe my project and some challenges I faced while building it.
