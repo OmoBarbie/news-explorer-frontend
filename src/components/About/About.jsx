@@ -14,16 +14,16 @@ const About = () => {
           of business and technical expertise. I am currently expanding my
           skills in AI, web development, and cloud technologies while building
           projects that solve real-world problems.
-          <p className="about__description">
-            Beyond my professional career, I am the founder of a health-focused
-            smoothie business My vision is to combine technology,
-            entrepreneurship, and exceptional customer experiences to create
-            meaningful impact in both the health and tech industries. Whether
-            developing applications, mentoring others, or growing my business, I
-            bring dedication, creativity, and a strong work ethic to everything
-            I do. I believe success comes from consistency, innovation, and a
-            genuine desire to make a positive difference.
-          </p>
+        </p>
+        <p className="about__description">
+          Beyond my professional career, I am the founder of a health-focused
+          smoothie business. My vision is to combine technology,
+          entrepreneurship, and exceptional customer experience to create
+          meaningful impact with enterprises seeking leadership in technology.
+          Whether developing applications, mentoring others, or growing my
+          business, I bring thoroughness, creativity, and a strong work ethic to
+          everything I do. I believe success comes from consistency, innovation,
+          and a genuine desire to make a positive difference.
         </p>
       </div>
     </section>

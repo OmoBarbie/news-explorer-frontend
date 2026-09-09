@@ -5,9 +5,16 @@ import { useState } from "react";
 import SearchForm from "../SearchForm/SearchForm";
 import whiteLogOutIcon from "../../images/white-logout-icon.svg";
 
-const Header = ({ handleLoginClick, isLoggedIn, onSignOut, onSearch }) => {
+const Header = ({
+  handleLoginClick,
+  isLoggedIn,
+  onSignOut,
+  onSearch,
+  isCloseButtonVisible,
+}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+
   function handleSubmit(e) {
     e.preventDefault();
     onSearch(searchQuery);
@@ -23,10 +30,12 @@ const Header = ({ handleLoginClick, isLoggedIn, onSignOut, onSearch }) => {
 
           {/* RIGHT SIDE */}
           <nav className="navigation">
-            <button
-              onClick={() => setIsMenuOpen(true)}
-              className="navigation__menu-button"
-            />
+            {isCloseButtonVisible && (
+              <button
+                onClick={() => setIsMenuOpen(true)}
+                className="navigation__menu-button"
+              />
+            )}
             <ul className="navigation__list">
               <li>
                 <Link
@@ -79,8 +88,11 @@ const Header = ({ handleLoginClick, isLoggedIn, onSignOut, onSearch }) => {
         <MobileMenu
           isMenuOpen={isMenuOpen}
           setIsMenuOpen={setIsMenuOpen}
-          handleLoginClick={handleLoginClick}
+          handleLoginClick={() => {
+            handleLoginClick();
+          }}
           handleLogoutClick={onSignOut}
+          isCloseButtonVisible={isCloseButtonVisible}
         />
       )}
     </>

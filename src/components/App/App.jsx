@@ -15,21 +15,29 @@ function App() {
   const [savedArticles, setSavedArticles] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [isCloseButtonVisible, setIsCloseButtonVisible] = useState(true);
 
-  const handleOpenLogin = () => setActiveModal("login");
+  const handleOpenLogin = () => {
+    setActiveModal("login");
+    setIsCloseButtonVisible(false);
+  };
   const handleOpenRegister = () => setActiveModal("register");
   const handleRegistrationSuccess = () =>
     setActiveModal("registration-success");
-  const handleCloseModal = () => setActiveModal(null);
+  const handleCloseModal = () => {
+    setActiveModal(null);
+    setIsCloseButtonVisible(true);
+  };
   const handleLogIn = () => {
     setIsLoggedIn(true);
     setActiveModal(null);
+    setIsCloseButtonVisible(true);
   };
 
-  console.log(savedArticles);
   const onSignOut = () => {
     setIsLoggedIn(false);
     setSavedArticles([]);
+    setIsCloseButtonVisible(true);
   };
 
   // ESC key close
@@ -60,6 +68,7 @@ function App() {
                   searchQuery={searchQuery}
                   setSearchQuery={setSearchQuery}
                   onSignOut={onSignOut}
+                  isCloseButtonVisible={isCloseButtonVisible}
                 />
               }
             />

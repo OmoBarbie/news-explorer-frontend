@@ -3,8 +3,7 @@ import About from "../About/About";
 import Footer from "../Footer/Footer";
 import NewsCardList from "../NewsCardList/NewsCardList";
 import "./Main.css";
-import ModalWithForm from "../ModalWithForm/ModalWithForm";
-import LoginModal from "../LoginModal/LoginModal";
+
 import searchNews from "../../utils/newsApi";
 import { useState } from "react";
 
@@ -16,6 +15,7 @@ const Main = ({
   setSavedArticles,
   setSearchQuery,
   searchQuery,
+  isCloseButtonVisible,
 }) => {
   const [articles, setArticles] = useState([]);
   const [status, setStatus] = useState("idle");
@@ -43,6 +43,7 @@ const Main = ({
         onSearch={handleSearch}
         isLoggedIn={isLoggedIn}
         onSignOut={onSignOut}
+        isCloseButtonVisible={isCloseButtonVisible}
       />
       <section className="main">
         <div className="main__list">
