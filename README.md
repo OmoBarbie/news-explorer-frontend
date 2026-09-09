@@ -1,16 +1,120 @@
-# React + Vite
+# News Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+News Explorer is a responsive React application that allows users to search for the latest news articles using the News API. Users can search for articles by keyword, view search results, and navigate between the Home and Saved Articles pages. The project was built as part of the TripleTen Software Engineering program.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Search for news articles by keyword
+- Display article cards with:
+  - Image
+  - Title
+  - Description
+  - Source
+  - Publication date
 
-## React Compiler
+- Loading indicator while articles are being fetched
+- "Nothing Found" state when no articles match the search
+- Responsive design for desktop, tablet, and mobile devices
+- Client-side routing with React Router
+- Saved Articles page
+- Login and Registration modal components
+- Form validation using a custom React hook
+- Reusable React components following the BEM methodology
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technologies Used
 
-## Expanding the ESLint configuration
+- React
+- Vite
+- React Router DOM
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+- BEM Methodology
+- News API
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project Structure
+
+```text
+src/
+├── components/
+├── contexts/
+├── hooks/
+├── images/
+├── utils/
+├── vendor/
+└── App.jsx
+```
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone <your-repository-url>
+```
+
+Navigate to the project directory:
+
+```bash
+cd news-explorer-frontend
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Build the production version:
+
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+Run ESLint:
+
+```bash
+npm run lint
+```
+
+## Live Demo
+
+GitHub Pages:
+
+**https://your-github-pages-url**
+
+## GitHub Repository
+
+**https://github.com/yourusername/news-explorer-frontend**
+
+## Future Improvements
+
+- User authentication with JWT
+- Save and delete articles using a backend API
+- Persistent user sessions
+- Improved error handling
+- Search history
+- User profile enhancements
+
+## Author
+
+**Omotayo Oluwole**
+
+Software Engineer | AI Solutions Associate | Technical Customer Success Professional
+
+LinkedIn: _(Optional)_
+
+GitHub: https://github.com/OmoBarbie
+Presentation vido: https://www.loom.com/share/b8c6c1abdfde4b5b9c52b048046c402e
