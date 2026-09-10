@@ -1,0 +1,133 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #ffffff;
+  background: transparent url("../../images/headerbackground.png") no-repeat
+    center;
+  background-size: cover;
+}
+
+.header__title {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Roboto Slab", serif;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #c4c4c4;
+  padding-top: 19px;
+  padding-bottom: 13px;
+  padding-left: 109px;
+  padding-right: 109px;
+}
+
+.navigation {
+}
+
+.navigation__list {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  gap: 43px;
+}
+
+.navigation__button {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 16px 8px;
+  color: #ffffff;
+  font-size: 18px;
+  border: 1px solid #ffffff;
+  width: 152px;
+  border-radius: 100px;
+  gap: 15px;
+  height: 48px;
+  box-sizing: border-box;
+}
+
+.navigation__button-logout-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.navigation__button-text {
+  font-family: "Roboto" Sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.navigation__button-text_color-black {
+  color: #1a1b22;
+}
+
+.navigation__button-saved-news {
+  color: #1a1b22;
+  border-color: #1a1b22;
+}
+
+.navigation__link {
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.navigation__link_saved {
+  font-style: italic;
+}
+
+.navigation__link_active {
+  border-bottom: 3px solid #ffffff;
+  padding-bottom: 26px;
+}
+
+.navigation__menu-button {
+  background-image: url("../../images/hamburgermenuicon.svg");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  display: none;
+}
+
+/*tablet view*/
+@media (max-width: 1023px) {
+  .header__wrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 16px;
+    padding-top: 22px;
+    padding-bottom: 20px;
+  }
+}
+
+/*mobile view*/
+@media (max-width: 768px) {
+  .header {
+    padding: 16px;
+  }
+
+  .header__wrapper {
+    padding: 16px;
+  }
+
+  .navigation__list {
+    display: none;
+  }
+
+  .navigation__menu-button {
+    display: block;
+    background-position: center;
+    height: 24px;
+    width: 24px;
+  }
+}

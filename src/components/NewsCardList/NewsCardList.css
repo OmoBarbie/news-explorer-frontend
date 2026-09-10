@@ -1,0 +1,93 @@
+.card__container {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  /* width: 400px; */
+}
+
+.cards__container {
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  padding: 0;
+  gap: 16px;
+  margin-bottom: 64px; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  list-style-type: none;
+  justify-content: center;
+  padding-left: 0;
+  margin: 0;
+}
+
+.show-more {
+  background-color: #ffffff;
+
+  border-radius: 80px;
+  width: 288px;
+  height: 64px;
+  opacity: 1;
+  font-family: "Roboto";
+  font-color: #1a1b22;
+  font-size: 18px;
+  border: none;
+  margin: 32px auto;
+}
+
+.show-more:hover {
+  border: none;
+  cursor: pointer;
+  background-color: #e8e8e8;
+}
+
+.no-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.no-results__image {
+  background-image: url("../../images/smileyfacenotfoundpic.svg");
+  width: 82.5px;
+  height: 82.5px;
+  opacity: 1;
+}
+
+.no-results__title {
+  font-family: "Roboto";
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 16px;
+  margin-top: 40px;
+}
+
+.no-results__description {
+  font-family: "Roboto sans";
+  font-size: 18px;
+  max-width: 200px;
+  text-align: center;
+  margin: 0;
+}
+
+/*Tablet view*/
+@media (min-width: 769px) and (max-width: 1024px) {
+  .show-more {
+  }
+}
+
+/*Mobile view*/
+@media (max-width: 768px) {
+  .cards__container {
+    flex-wrap: wrap;
+  }
+
+  .show-more {
+    margin-top: 16px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    width: 100%;
+    font-size: 16px;
+  }
+}
