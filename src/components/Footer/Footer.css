@@ -42,13 +42,13 @@
 }
 
 .footer__github {
-  background: url("../../images/github.png") center transparent no-repeat;
+  background: url("../../images/github.svg") center transparent no-repeat;
   width: 24px;
   height: 24px;
 }
 
 .footer__linkedin {
-  background: url("../../images/LinkedIn.png") center transparent no-repeat;
+  background: url("../../images/LinkedIn.svg") center transparent no-repeat;
   width: 24px;
   height: 24px;
 }

@@ -45,7 +45,7 @@ const Main = ({
         onSignOut={onSignOut}
         isCloseButtonVisible={isCloseButtonVisible}
       />
-      <section className="main">
+      <main className="main">
         <div className="main__list">
           <NewsCardList
             articles={articles}
@@ -55,7 +55,7 @@ const Main = ({
             searchQuery={searchQuery}
           />
         </div>
-      </section>
+      </main>
       <About></About>
       <Footer></Footer>
     </>

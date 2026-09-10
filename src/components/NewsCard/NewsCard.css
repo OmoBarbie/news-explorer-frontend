@@ -61,19 +61,20 @@
 }
 
 .card__bookmark-button {
-  background: url("../../images/lightgraybookmark.png") center #ffffff no-repeat;
+  background: url("../../images/lightgraybookmark.svg") center #ffffff no-repeat;
   height: 40px;
   width: 40px;
   border-radius: 8px;
   border: none;
 }
+
 .card__bookmark-button_bookmarked_true {
-  background-image: url("../../images/bluebookmark.png");
+  background-image: url("../../images/bluebookmark.svg");
 }
 
 .card__bookmark-button:hover {
   cursor: pointer;
-  background-image: url("../../images/bookmark-dark.png");
+  background-image: url("../../images/bookmark-dark.svg");
 }
 
 .card__bookmark-container {
@@ -83,7 +84,7 @@
 }
 
 .card__remove-bookmark-button {
-  background: url("../../images/trashcanicon.png") center #ffffff no-repeat;
+  background: url("../../images/trashcanicon.svg") center #ffffff no-repeat;
   height: 40px;
   width: 40px;
   border-radius: 8px;
@@ -91,7 +92,7 @@
 }
 
 .card__remove-bookmark-button:hover {
-  background: url("../../images/darktrashcanicon.png") center #ffffff no-repeat;
+  background: url("../../images/darktrashcanicon.svg") center #ffffff no-repeat;
 }
 
 .card__delete-message {
